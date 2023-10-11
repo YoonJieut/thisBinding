@@ -13,10 +13,17 @@
 
   <script>
     const btnClick = document.getElementById('btn-click');
+    const root = document.getElementById('root');
+
+    root.style.height = "500vh"
+    root.style.width = "500vw"
+
     console.log(btnClick);
 
-    btnClick.addEventListener('click', () => {
-      
+    root.addEventListener('wheel', event => {
+      console.log(event);
+      // ! delta Y 가 변하는 것을 발견 - 음수 양수로 변함
+      // 양수인 경우 글씨가 나타남,  음수면 글씨가 사라짐 등
     })
   </script>
 </body>
